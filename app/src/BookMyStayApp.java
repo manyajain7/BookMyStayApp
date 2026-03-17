@@ -1,12 +1,19 @@
+import java.util.*;
+
 class Room {
-    int id; boolean available;
-    Room(int id){this.id=id; available=false;}
+    boolean available;
+    Room(boolean available){this.available=available;}
 }
 
 public class BookMyStayApp {
     public static void main(String[] args) {
-        Room r=new Room(101);
-        r.available=true;
-        System.out.println("Booking cancelled");
+        ArrayList<Room> rooms=new ArrayList<>();
+        rooms.add(new Room(true));
+        rooms.add(new Room(false));
+
+        int count=0;
+        for(Room r:rooms) if(r.available) count++;
+
+        System.out.println("Available: "+count);
     }
 }
