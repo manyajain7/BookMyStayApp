@@ -1,19 +1,20 @@
 import java.util.*;
 
 class Room {
-    int id; String type; boolean available;
-    Room(int id,String type,boolean available){
-        this.id=id; this.type=type; this.available=available;
+    int id; boolean available;
+    Room(int id,boolean available){
+        this.id=id; this.available=available;
     }
 }
 
 public class BookMyStayApp {
     public static void main(String[] args) {
         ArrayList<Room> rooms=new ArrayList<>();
-        rooms.add(new Room(101,"Single",true));
-        rooms.add(new Room(102,"Double",false));
+        rooms.add(new Room(101,true));
+        rooms.add(new Room(102,false));
 
         for(Room r:rooms)
-            System.out.println(r.id+" "+r.type+" "+r.available);
+            if(r.available)
+                System.out.println("Available Room: "+r.id);
     }
 }
