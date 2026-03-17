@@ -1,13 +1,12 @@
-class Booking {
-    int roomId,customerId;
-    Booking(int r,int c){
-        roomId=r; customerId=c;
-    }
+class Room {
+    int id; boolean available;
+    Room(int id){this.id=id; available=false;}
 }
 
 public class BookMyStayApp {
     public static void main(String[] args) {
-        Booking b=new Booking(101,1);
-        System.out.println("Booking done for room "+b.roomId);
+        Room r=new Room(101);
+        r.available=true;
+        System.out.println("Booking cancelled");
     }
 }
