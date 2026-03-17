@@ -1,13 +1,13 @@
-class Customer {
-    int id; String name;
-    Customer(int id,String name){
-        this.id=id; this.name=name;
+class Booking {
+    int roomId,customerId;
+    Booking(int r,int c){
+        roomId=r; customerId=c;
     }
 }
 
 public class BookMyStayApp {
     public static void main(String[] args) {
-        Customer c=new Customer(1,"Manya");
-        System.out.println(c.id+" "+c.name);
+        Booking b=new Booking(101,1);
+        System.out.println("Booking done for room "+b.roomId);
     }
 }
