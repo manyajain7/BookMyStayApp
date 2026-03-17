@@ -1,17 +1,13 @@
-import java.util.*;
-
-class Room {
-    int id; boolean available;
-    Room(int id,boolean available){
-        this.id=id; this.available=available;
+class Customer {
+    int id; String name;
+    Customer(int id,String name){
+        this.id=id; this.name=name;
     }
 }
 
 public class BookMyStayApp {
     public static void main(String[] args) {
-        Room r=new Room(101,false);
-
-        if(!r.available)
-            System.out.println("Already booked!");
+        Customer c=new Customer(1,"Manya");
+        System.out.println(c.id+" "+c.name);
     }
 }
