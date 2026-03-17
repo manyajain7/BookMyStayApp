@@ -9,16 +9,9 @@ class Room {
 
 public class BookMyStayApp {
     public static void main(String[] args) {
-        ArrayList<Room> rooms=new ArrayList<>();
-        rooms.add(new Room(101,true));
+        Room r=new Room(101,false);
 
-        int bookId=101;
-
-        for(Room r:rooms){
-            if(r.id==bookId && r.available){
-                r.available=false;
-                System.out.println("Room booked");
-            }
-        }
+        if(!r.available)
+            System.out.println("Already booked!");
     }
 }
